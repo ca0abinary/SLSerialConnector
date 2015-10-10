@@ -1,0 +1,422 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4F0CF5071BC9A15500D34126 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F0CF5061BC9A15500D34126 /* AppDelegate.m */; };
+		4F0CF5091BC9A15500D34126 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F0CF5081BC9A15500D34126 /* main.m */; };
+		4F0CF50C1BC9A15500D34126 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F0CF50B1BC9A15500D34126 /* ViewController.m */; };
+		4F0CF50E1BC9A15500D34126 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F0CF50D1BC9A15500D34126 /* Images.xcassets */; };
+		4F0CF5111BC9A15500D34126 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F0CF50F1BC9A15500D34126 /* Main.storyboard */; };
+		4F0CF51D1BC9A15500D34126 /* SLSerialConnectorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F0CF51C1BC9A15500D34126 /* SLSerialConnectorTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4F0CF5171BC9A15500D34126 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4F0CF4F81BC9A15500D34126 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4F0CF4FF1BC9A15500D34126;
+			remoteInfo = SLSerialConnector;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4F0CF5001BC9A15500D34126 /* SLSerialConnector.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SLSerialConnector.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F0CF5041BC9A15500D34126 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4F0CF5051BC9A15500D34126 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		4F0CF5061BC9A15500D34126 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		4F0CF5081BC9A15500D34126 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		4F0CF50A1BC9A15500D34126 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		4F0CF50B1BC9A15500D34126 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		4F0CF50D1BC9A15500D34126 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		4F0CF5101BC9A15500D34126 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4F0CF5161BC9A15500D34126 /* SLSerialConnectorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SLSerialConnectorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F0CF51B1BC9A15500D34126 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4F0CF51C1BC9A15500D34126 /* SLSerialConnectorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SLSerialConnectorTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4F0CF4FD1BC9A15500D34126 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4F0CF5131BC9A15500D34126 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4F0CF4F71BC9A15500D34126 = {
+			isa = PBXGroup;
+			children = (
+				4F0CF5021BC9A15500D34126 /* SLSerialConnector */,
+				4F0CF5191BC9A15500D34126 /* SLSerialConnectorTests */,
+				4F0CF5011BC9A15500D34126 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4F0CF5011BC9A15500D34126 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4F0CF5001BC9A15500D34126 /* SLSerialConnector.app */,
+				4F0CF5161BC9A15500D34126 /* SLSerialConnectorTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4F0CF5021BC9A15500D34126 /* SLSerialConnector */ = {
+			isa = PBXGroup;
+			children = (
+				4F0CF5051BC9A15500D34126 /* AppDelegate.h */,
+				4F0CF5061BC9A15500D34126 /* AppDelegate.m */,
+				4F0CF50A1BC9A15500D34126 /* ViewController.h */,
+				4F0CF50B1BC9A15500D34126 /* ViewController.m */,
+				4F0CF50D1BC9A15500D34126 /* Images.xcassets */,
+				4F0CF50F1BC9A15500D34126 /* Main.storyboard */,
+				4F0CF5031BC9A15500D34126 /* Supporting Files */,
+			);
+			path = SLSerialConnector;
+			sourceTree = "<group>";
+		};
+		4F0CF5031BC9A15500D34126 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4F0CF5041BC9A15500D34126 /* Info.plist */,
+				4F0CF5081BC9A15500D34126 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4F0CF5191BC9A15500D34126 /* SLSerialConnectorTests */ = {
+			isa = PBXGroup;
+			children = (
+				4F0CF51C1BC9A15500D34126 /* SLSerialConnectorTests.m */,
+				4F0CF51A1BC9A15500D34126 /* Supporting Files */,
+			);
+			path = SLSerialConnectorTests;
+			sourceTree = "<group>";
+		};
+		4F0CF51A1BC9A15500D34126 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4F0CF51B1BC9A15500D34126 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4F0CF4FF1BC9A15500D34126 /* SLSerialConnector */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4F0CF5201BC9A15500D34126 /* Build configuration list for PBXNativeTarget "SLSerialConnector" */;
+			buildPhases = (
+				4F0CF4FC1BC9A15500D34126 /* Sources */,
+				4F0CF4FD1BC9A15500D34126 /* Frameworks */,
+				4F0CF4FE1BC9A15500D34126 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SLSerialConnector;
+			productName = SLSerialConnector;
+			productReference = 4F0CF5001BC9A15500D34126 /* SLSerialConnector.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4F0CF5151BC9A15500D34126 /* SLSerialConnectorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4F0CF5231BC9A15500D34126 /* Build configuration list for PBXNativeTarget "SLSerialConnectorTests" */;
+			buildPhases = (
+				4F0CF5121BC9A15500D34126 /* Sources */,
+				4F0CF5131BC9A15500D34126 /* Frameworks */,
+				4F0CF5141BC9A15500D34126 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4F0CF5181BC9A15500D34126 /* PBXTargetDependency */,
+			);
+			name = SLSerialConnectorTests;
+			productName = SLSerialConnectorTests;
+			productReference = 4F0CF5161BC9A15500D34126 /* SLSerialConnectorTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4F0CF4F81BC9A15500D34126 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+				ORGANIZATIONNAME = "Jonathan DeMarks";
+				TargetAttributes = {
+					4F0CF4FF1BC9A15500D34126 = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					4F0CF5151BC9A15500D34126 = {
+						CreatedOnToolsVersion = 6.4;
+						TestTargetID = 4F0CF4FF1BC9A15500D34126;
+					};
+				};
+			};
+			buildConfigurationList = 4F0CF4FB1BC9A15500D34126 /* Build configuration list for PBXProject "SLSerialConnector" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4F0CF4F71BC9A15500D34126;
+			productRefGroup = 4F0CF5011BC9A15500D34126 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4F0CF4FF1BC9A15500D34126 /* SLSerialConnector */,
+				4F0CF5151BC9A15500D34126 /* SLSerialConnectorTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4F0CF4FE1BC9A15500D34126 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4F0CF50E1BC9A15500D34126 /* Images.xcassets in Resources */,
+				4F0CF5111BC9A15500D34126 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4F0CF5141BC9A15500D34126 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4F0CF4FC1BC9A15500D34126 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4F0CF50C1BC9A15500D34126 /* ViewController.m in Sources */,
+				4F0CF5091BC9A15500D34126 /* main.m in Sources */,
+				4F0CF5071BC9A15500D34126 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4F0CF5121BC9A15500D34126 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4F0CF51D1BC9A15500D34126 /* SLSerialConnectorTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4F0CF5181BC9A15500D34126 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4F0CF4FF1BC9A15500D34126 /* SLSerialConnector */;
+			targetProxy = 4F0CF5171BC9A15500D34126 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		4F0CF50F1BC9A15500D34126 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4F0CF5101BC9A15500D34126 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4F0CF51E1BC9A15500D34126 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		4F0CF51F1BC9A15500D34126 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		4F0CF5211BC9A15500D34126 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = SLSerialConnector/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		4F0CF5221BC9A15500D34126 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = SLSerialConnector/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		4F0CF5241BC9A15500D34126 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = SLSerialConnectorTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SLSerialConnector.app/Contents/MacOS/SLSerialConnector";
+			};
+			name = Debug;
+		};
+		4F0CF5251BC9A15500D34126 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = SLSerialConnectorTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SLSerialConnector.app/Contents/MacOS/SLSerialConnector";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4F0CF4FB1BC9A15500D34126 /* Build configuration list for PBXProject "SLSerialConnector" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4F0CF51E1BC9A15500D34126 /* Debug */,
+				4F0CF51F1BC9A15500D34126 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4F0CF5201BC9A15500D34126 /* Build configuration list for PBXNativeTarget "SLSerialConnector" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4F0CF5211BC9A15500D34126 /* Debug */,
+				4F0CF5221BC9A15500D34126 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		4F0CF5231BC9A15500D34126 /* Build configuration list for PBXNativeTarget "SLSerialConnectorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4F0CF5241BC9A15500D34126 /* Debug */,
+				4F0CF5251BC9A15500D34126 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4F0CF4F81BC9A15500D34126 /* Project object */;
+}
