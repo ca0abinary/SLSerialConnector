@@ -79,6 +79,7 @@
 		4F0CF5021BC9A15500D34126 /* SLSerialConnector */ = {
 			isa = PBXGroup;
 			children = (
+				4F0CF5261BC9A22600D34126 /* Switch Devices */,
 				4F0CF5051BC9A15500D34126 /* AppDelegate.h */,
 				4F0CF5061BC9A15500D34126 /* AppDelegate.m */,
 				4F0CF50A1BC9A15500D34126 /* ViewController.h */,
@@ -114,6 +115,13 @@
 				4F0CF51B1BC9A15500D34126 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4F0CF5261BC9A22600D34126 /* Switch Devices */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Switch Devices";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -337,6 +345,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = SLSerialConnector/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -348,6 +357,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = SLSerialConnector/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -407,6 +417,7 @@
 				4F0CF5221BC9A15500D34126 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4F0CF5231BC9A15500D34126 /* Build configuration list for PBXNativeTarget "SLSerialConnectorTests" */ = {
 			isa = XCConfigurationList;
@@ -415,6 +426,7 @@
 				4F0CF5251BC9A15500D34126 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

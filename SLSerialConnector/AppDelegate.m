@@ -14,12 +14,21 @@
 
 @implementation AppDelegate
 
+NSProcessInfo *highPriority;
+
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
-    // Insert code here to initialize your application
+    highPriority = [[NSProcessInfo processInfo]
+                    beginActivityWithOptions:
+                           (NSActivityLatencyCritical |
+                            NSActivityIdleSystemSleepDisabled |
+                            NSActivityAutomaticTerminationDisabled |
+                            NSActivitySuddenTerminationDisabled |
+                            NSActivityBackground) 
+                    reason:@"Serial SL Studio Log Monnitor"];
 }
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification {
-    // Insert code here to tear down your application
+    [[NSProcessInfo processInfo] endActivity:highPriority];
 }
 
 @end

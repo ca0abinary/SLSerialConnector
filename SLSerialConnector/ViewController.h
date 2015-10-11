@@ -10,6 +10,13 @@
 
 @interface ViewController : NSViewController
 
+@property (weak) IBOutlet NSTextFieldCell *LastCommandText;
+@property (weak) IBOutlet NSMatrix *InputRadioGroup;
+@property (weak) IBOutlet NSButtonCell *Camera1;
+@property (weak) IBOutlet NSButtonCell *Camera2;
+@property (weak) IBOutlet NSButtonCell *Media;
+@property (weak) IBOutlet NSButtonCell *External;
+@property (weak) IBOutlet NSButtonCell *Blackout;
 
 @end
 
