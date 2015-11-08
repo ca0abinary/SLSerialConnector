@@ -24,7 +24,7 @@ NSProcessInfo *highPriority;
                             NSActivityAutomaticTerminationDisabled |
                             NSActivitySuddenTerminationDisabled |
                             NSActivityBackground) 
-                    reason:@"Serial SL Studio Log Monnitor"];
+                    reason:@"Serial SL Studio Log Monitor"];
 }
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification {

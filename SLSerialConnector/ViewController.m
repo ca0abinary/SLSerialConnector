@@ -8,6 +8,9 @@
 
 #import "ViewController.h"
 #import <asl.h>
+#include <sys/ioctl.h>
+#include <termios.h>
+#include <IOKit/serial/IOSerialKeys.h>
 
 @implementation ViewController
 
@@ -17,7 +20,9 @@ NSTimer *timer = NULL;
     [super viewDidLoad];
 
     // Configure a timer to monitor the logs (250 ms poll)
-    timer = [NSTimer scheduledTimerWithTimeInterval: 0.25 target:self selector:@selector(performPolledSearch) userInfo:nil repeats:true];
+    timer = [NSTimer scheduledTimerWithTimeInterval: 0.2 target:self selector:@selector(performPolledSearch) userInfo:nil repeats:true];
+    
+    [self populateSerialPortComboBox];
 }
 
 - (void)setRepresentedObject:(id)representedObject {
@@ -65,18 +70,78 @@ NSString *lastMessageId = NULL;
         [_Blackout setState:FALSE];
         
         switch (lastInput) {
-            case 0: [_Camera1 setState:TRUE]; break;
-            case 1: [_Camera2 setState:TRUE]; break;
-            case 2: [_Media setState:TRUE]; break;
-            case 3: [_External setState:TRUE]; break;
-            case 4: [_Blackout setState:TRUE]; break;
+            case 0: [_Camera1 setState:TRUE];
+                [self outputSelectedInputToSwitchDevice:3]; break;
+            case 1: [_Camera2 setState:TRUE];
+                [self outputSelectedInputToSwitchDevice:4]; break;
+            case 2: [_Media setState:TRUE];
+                [self outputSelectedInputToSwitchDevice:7]; break;
+            case 3: [_External setState:TRUE];
+                [self outputSelectedInputToSwitchDevice:2]; break;
+            case 4: [_Blackout setState:TRUE];
+                [self outputSelectedInputToSwitchDevice:7]; break;
             default: break;
         }
         
         currentInput = lastInput;
-        
-        // Can set the hardware switcher here via a serial command (or what have you)
     }
+}
+
+- (void)populateSerialPortComboBox {
+    int index = 0, indexOfSerialPort = -1;
+    io_object_t serialPort;
+    io_iterator_t serialPortIterator;
+    
+    // ask for all the serial ports
+    IOServiceGetMatchingServices(
+                                 kIOMasterPortDefault,
+                                 IOServiceMatching(kIOSerialBSDServiceValue),
+                                 &serialPortIterator);
+    
+    // loop through all the serial ports
+    [_Device removeAllItems];
+    while ((serialPort = IOIteratorNext(serialPortIterator))) {
+        CFTypeRef bsdPathAsCFString = IORegistryEntryCreateCFProperty(serialPort,
+                                        CFSTR(kIOCalloutDeviceKey),
+                                        kCFAllocatorDefault,
+                                        0);
+        if (bsdPathAsCFString) {
+            if (CFStringFind(bsdPathAsCFString, CFSTR("usbserial"), kCFCompareBackwards).location > -1) {
+                indexOfSerialPort = index;
+            }
+            [_Device addItemWithObjectValue: (__bridge NSString *)bsdPathAsCFString];
+            CFRelease(bsdPathAsCFString);
+        }
+
+        IOObjectRelease(serialPort);
+        index++;
+    }
+    
+    IOObjectRelease(serialPortIterator);
+    if (indexOfSerialPort > -1) [_Device selectItemAtIndex:indexOfSerialPort];
+}
+
+int fd = -1;
+- (void)outputSelectedInputToSwitchDevice:(int)inputNumber {
+    if (fd == -1) {
+        // open the serial like POSIX C
+        fd = open([(NSString *)[_Device objectValueOfSelectedItem] cStringUsingEncoding:NSASCIIStringEncoding], O_WRONLY | O_NOCTTY | O_NONBLOCK);
+        
+        /* set the other settings (in this case, 9600 8N1) */
+        struct termios original, settings;
+        tcgetattr(fd, &original);
+        cfmakeraw(&settings);
+        ioctl(fd, IOSSIOSPEED, B9600);
+    }
+    if (fd == -1) return;
+    
+    // Build output string
+    char output[4];
+    sprintf(output, "%u!\r\n", inputNumber);
+
+    // Send the channel change event over the serial port
+    write(fd, &output, sizeof(output));
+    tcdrain(fd);
 }
 
 @end

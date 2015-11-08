@@ -17,6 +17,10 @@
 @property (weak) IBOutlet NSButtonCell *Media;
 @property (weak) IBOutlet NSButtonCell *External;
 @property (weak) IBOutlet NSButtonCell *Blackout;
+@property (weak) IBOutlet NSComboBox *Device;
+
+- (void)populateSerialPortComboBox;
+- (void)outputSelectedInputToSwitchDevice:(int)inputNumber;
 
 @end
 
