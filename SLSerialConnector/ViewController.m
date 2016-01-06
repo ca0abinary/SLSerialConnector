@@ -75,11 +75,11 @@ NSString *lastMessageId = NULL;
             case 1: [_Camera2 setState:TRUE];
                 [self outputSelectedInputToSwitchDevice:4]; break;
             case 2: [_Media setState:TRUE];
-                [self outputSelectedInputToSwitchDevice:7]; break;
+                [self outputSelectedInputToSwitchDevice:8]; break;
             case 3: [_External setState:TRUE];
                 [self outputSelectedInputToSwitchDevice:2]; break;
             case 4: [_Blackout setState:TRUE];
-                [self outputSelectedInputToSwitchDevice:7]; break;
+                [self outputSelectedInputToSwitchDevice:8]; break;
             default: break;
         }
         
