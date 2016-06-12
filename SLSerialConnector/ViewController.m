@@ -70,16 +70,11 @@ NSString *lastMessageId = NULL;
         [_Blackout setState:FALSE];
         
         switch (lastInput) {
-            case 0: [_Camera1 setState:TRUE];
-                [self outputSelectedInputToSwitchDevice:3]; break;
-            case 1: [_Camera2 setState:TRUE];
-                [self outputSelectedInputToSwitchDevice:4]; break;
-            case 2: [_Media setState:TRUE];
-                [self outputSelectedInputToSwitchDevice:8]; break;
-            case 3: [_External setState:TRUE];
-                [self outputSelectedInputToSwitchDevice:2]; break;
-            case 4: [_Blackout setState:TRUE];
-                [self outputSelectedInputToSwitchDevice:8]; break;
+            case 0: [_Camera1 setState:TRUE];  [self outputSelectedInputToSwitchDevice:1]; break;
+            case 1: [_Camera2 setState:TRUE];  [self outputSelectedInputToSwitchDevice:2]; break;
+            case 2: [_Media setState:TRUE];    [self outputSelectedInputToSwitchDevice:3]; break;
+            case 3: [_External setState:TRUE]; [self outputSelectedInputToSwitchDevice:4]; break;
+            case 4: [_Blackout setState:TRUE]; [self outputSelectedInputToSwitchDevice:3]; break;
             default: break;
         }
         
@@ -125,19 +120,35 @@ int fd = -1;
 - (void)outputSelectedInputToSwitchDevice:(int)inputNumber {
     if (fd == -1) {
         // open the serial like POSIX C
-        fd = open([(NSString *)[_Device objectValueOfSelectedItem] cStringUsingEncoding:NSASCIIStringEncoding], O_WRONLY | O_NOCTTY | O_NONBLOCK);
+        fd = open([(NSString *)[_Device objectValueOfSelectedItem] cStringUsingEncoding:NSASCIIStringEncoding], O_RDWR | O_NOCTTY | O_NONBLOCK);
+
+        if (fd == -1) return;
         
+        fcntl(fd, F_SETFL, 0);
+
         /* set the other settings (in this case, 9600 8N1) */
         struct termios original, settings;
         tcgetattr(fd, &original);
         cfmakeraw(&settings);
-        ioctl(fd, IOSSIOSPEED, B9600);
+        speed_t baud = 115200;
+        ioctl(fd, IOSSIOSPEED, &baud);
+        
+        // Full screen mode (no PIP)
+        const char *fullMode = "Mode3.";
+        write(fd, fullMode, strlen(fullMode));
+        tcdrain(fd);
+        [NSThread sleepForTimeInterval:0.25];
+
+        // 720p
+        const char *res720p = "Resolution2.";
+        write(fd, res720p, strlen(res720p));
+        tcdrain(fd);
+        [NSThread sleepForTimeInterval:0.25];
     }
-    if (fd == -1) return;
     
     // Build output string
-    char output[4];
-    sprintf(output, "%u!\r\n", inputNumber);
+    char output[5];
+    sprintf(output, "IN%u.", inputNumber);
 
     // Send the channel change event over the serial port
     write(fd, &output, sizeof(output));
